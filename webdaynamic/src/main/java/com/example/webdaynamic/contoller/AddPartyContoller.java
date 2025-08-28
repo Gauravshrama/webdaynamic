@@ -36,4 +36,13 @@ public class AddPartyContoller {
         return addPartyService.addparty(party);
     }
 
+    @PutMapping("/{id}")
+    public Party updateparty(@PathVariable Long id,@RequestBody Party party){
+        return addPartyService.updateparty(id,party);
+    }
+    @DeleteMapping("/{id}")
+    public void deleteparty(@PathVariable Long id){
+         addPartyService.deleteparty(id);
+    }
+
 }
